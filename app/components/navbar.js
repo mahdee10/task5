@@ -3,7 +3,6 @@ import React from "react";
 import '../globals.css'
 import Image from "next/image";
 import logo from "../../public/imgs/logo.gif"
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 export default function NavBar() {
     const pathname = usePathname()
