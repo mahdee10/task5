@@ -54,9 +54,9 @@ export default function ContactUs() {
 
 
             <div className="aboutUs text-white ml-5 mt-16 flex flex-col items-center justify-center">
-                <h1 className="font-bold mb-10 sm:text-5xl text-2xl">Our Employees</h1>
+                <h1 className="text-5xl font-bold mb-10">Our Employees</h1>
 
-                <div className="flex justify-center sm:flex-row flex-col">
+                <div className="flex justify-center sm:flex-row flex-col items-center">
                     {employees.map((employee) => (
                         <Employee key={employee.name} name={employee.name} email={employee.email} path={employee.path} />
                     ))}
