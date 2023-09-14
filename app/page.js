@@ -47,7 +47,7 @@ export default function Page() {
         <>
         <NavBar></NavBar>
         <section className="mx-auto 2xl:container" style={{ paddingTop: '100px' }}>
-        <div className="image-container flex justify-center">
+        <div className=" image-container flex  justify-center sm:flex-row  flex-col  items-center">
 
             {imgs.map((img) => (
                 <Banner key={img.title} title={img.title} content={img.content} path={img.path} />
@@ -57,7 +57,7 @@ export default function Page() {
         <div className="aboutUs text-white ml-5 mt-16 flex flex-col items-center justify-center">
         <h1 className="text-5xl font-bold">About Us</h1>
 
-            <div className="box-container flex items-center justify-center w-full gap-5">
+            <div className=" box-container flex items-center justify-center w-full sm:gap-5 sm:flex-row flex-col ">
                 {details.map((detail) => (
                     <AboutUs key={detail.caption} caption={detail.caption} content={detail.content} />
                 ))}

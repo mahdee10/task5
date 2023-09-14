@@ -87,7 +87,7 @@ export default function Jobs() {
                 <div className="aboutUs text-white ml-5 mt-16 flex flex-col items-center justify-center mb-5">
                     <h1 className="text-5xl font-bold">How to Apply</h1>
 
-                    <div className="box-container flex items-center justify-center w-full gap-5">
+                    <div className="box-container flex items-center justify-center w-full sm:gap-5 sm:flex-row flex-col">
                         <div className="box flex-1 p-5 text-center ">
                             <h2 className="text-2xl font-bold text-dark-pink">Email us</h2>
                             <p>jobs@creoshift.com</p>

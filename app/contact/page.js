@@ -27,9 +27,9 @@ export default function ContactUs() {
         <NavBar></NavBar>
         <section className="mx-auto 2xl:container" style={{ paddingTop: '100px' }}>
 
-            <div className="flex justify-center text-white items-end leading-8">
-                <div className="flex justify-center w-10/12">
-                    <div className="w-6/12 mx-1" >
+            <div className="flex justify-center text-white items-end leading-8 ">
+                <div className="flex justify-center w-10/12 sm:flex-row flex-col items-center">
+                    <div className="mx-1 sm:w-6/12 " >
                         <h2 className="text-3xl font-bold mt-5 mb-1">Contact Us</h2>
                         <h2 className="text-3xl font-bold mb-1.5">+961 8 822 224</h2>
                         <p>
@@ -42,7 +42,7 @@ export default function ContactUs() {
                             speak with you about investing services.
                         </p>
                     </div>
-                    <div className="w-6/12">
+                    <div className="sm:w-6/12 w-full">
                         <Image className="" src={call} alt="" />
                     </div>
                 </div>
@@ -54,9 +54,9 @@ export default function ContactUs() {
 
 
             <div className="aboutUs text-white ml-5 mt-16 flex flex-col items-center justify-center">
-                <h1 className="text-5xl font-bold mb-10">Our Employees</h1>
+                <h1 className="font-bold mb-10 sm:text-5xl text-2xl">Our Employees</h1>
 
-                <div className="flex justify-center">
+                <div className="flex justify-center sm:flex-row flex-col">
                     {employees.map((employee) => (
                         <Employee key={employee.name} name={employee.name} email={employee.email} path={employee.path} />
                     ))}
