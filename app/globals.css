@@ -108,8 +108,18 @@ header {
   display: none;
 }
 
+.swiper-slide {
+  transition: color 0.3s; /* Add a transition for smooth color changes */
+}
 
+.middle-slide {
+  filter: blur(0) !important;
+}
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: #b9014c !important; /* Change 'your-desired-color' to the color you want */
+}
 /* .aboutUs {
   color: white;
   margin-left: 20px;
