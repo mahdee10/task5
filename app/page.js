@@ -1,5 +1,5 @@
-
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import './globals.css'
 import Banner from "./components/home/banner";
 import frontend from "../public/imgs/frontend.png"
@@ -10,7 +10,7 @@ import MyForm from "./components/home/form";
 import NavBar from "./components/navbar";
 import Footer from "./components/footer";
 export default function Page() {
-    
+    const [choose,setChoose]=useState("")
     const imgs = [
         {
             title: "Frontend",
@@ -43,6 +43,10 @@ export default function Page() {
             content: "Starting with your idea, or concept, we will build the basic application allowing you to tweak, mould and enhance as we journey through each development stage. By providing initial builds and preview releases we enable you to see your software take shape."
         }
     ]
+
+    function fieldChange(field){
+        setChoose(field)
+    }
     return (
         <>
         <NavBar></NavBar>
@@ -50,7 +54,7 @@ export default function Page() {
         <div className=" image-container flex  justify-center sm:flex-row  flex-col  items-center">
 
             {imgs.map((img) => (
-                <Banner key={img.title} title={img.title} content={img.content} path={img.path} />
+                <Banner  key={img.title} title={img.title} content={img.content} path={img.path} fieldChange={fieldChange} />
             ))}
         </div>
 
@@ -67,7 +71,7 @@ export default function Page() {
 
         <div className="register text-white text-center flex justify-center flex-col items-center mt-8">
             <h2 className="text-2xl font-bold">Fill the following form if you are interested to join one of our internships</h2>
-            <MyForm></MyForm>
+            <MyForm choose={choose}></MyForm>
         </div>
     </section>
     <Footer></Footer>
