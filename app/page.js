@@ -76,14 +76,21 @@ export default function Page() {
             <section>
 
 
-                <div className="text-white text-center flex justify-center flex-col items-center mt-8">
+                                <div className="text-white text-center flex justify-center flex-col items-center mt-8">
                     <h2 className="text-2xl font-bold">Which is your best</h2>
-                    <div className=" box-container flex items-center justify-center w-full sm:gap-5 sm:flex-row flex-col mt-5">
-
-                        <h2 onClick={()=>changeIntern("Frontend")} className="text-center text-dark-pink mb-5 text-2xl font-bold">Frontend</h2>
-                        <h2 onClick={()=>changeIntern("Backend")} className="text-center text-dark-pink mb-5 text-2xl font-bold">Backend</h2>
-                        <h2 onClick={()=>changeIntern("Mobile")} className="text-center text-dark-pink mb-5 text-2xl font-bold">Mobile</h2>
-
+                    <div className="box-container flex items-center justify-center w-full sm:gap-5 sm:flex-row flex-col mt-5">
+                        <label className="text-center text-dark-pink mb-5 text-2xl font-bold">
+                            <input type="radio" name="internship" onClick={() => changeIntern("Frontend")} />
+                            Frontend
+                        </label>
+                        <label className="text-center text-dark-pink mb-5 text-2xl font-bold">
+                            <input type="radio" name="internship" onClick={() => changeIntern("Backend")} />
+                            Backend
+                        </label>
+                        <label className="text-center text-dark-pink mb-5 text-2xl font-bold">
+                            <input type="radio" name="internship" onClick={() => changeIntern("Mobile")} />
+                            Mobile
+                        </label>
                     </div>
                     <h2  className="text-center text-white mb-5 text-2xl font-bold">You have chosen: {intern}</h2>
                 </div>
