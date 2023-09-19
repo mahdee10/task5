@@ -10,7 +10,10 @@ import MyForm from "./components/home/form";
 import NavBar from "./components/navbar";
 import Footer from "./components/footer";
 export default function Page() {
-    const [choose,changeChoose]=useState("")
+    const [intern, setIntern] = useState("(click on the best internship)");
+    const changeIntern = (int) => {
+        setIntern(int);
+    }
     const imgs = [
         {
             title: "Frontend",
@@ -45,33 +48,48 @@ export default function Page() {
     ]
     return (
         <>
-        <NavBar></NavBar>
-        <section className="mx-auto 2xl:container" style={{ paddingTop: '100px' }}>
-        <div className=" image-container flex  justify-center sm:flex-row  flex-col  items-center">
+            <NavBar></NavBar>
+            <section className="mx-auto 2xl:container" style={{ paddingTop: '100px' }}>
+                <div className=" image-container flex  justify-center sm:flex-row  flex-col  items-center">
 
-            {imgs.map((img) => (
-                <Banner key={img.title} title={img.title} content={img.content} path={img.path} />
-            ))}
-        </div>
+                    {imgs.map((img) => (
+                        <Banner key={img.title} title={img.title} content={img.content} path={img.path} />
+                    ))}
+                </div>
 
-        <div className="aboutUs text-white  mt-16 flex flex-col items-center justify-center md:ml-5">
-        <h1 className="text-5xl font-bold">About Us</h1>
+                <div className="aboutUs text-white  mt-16 flex flex-col items-center justify-center md:ml-5">
+                    <h1 className="text-5xl font-bold">About Us</h1>
 
-            <div className=" box-container flex items-center justify-center w-full sm:gap-5 sm:flex-row flex-col ">
-                {details.map((detail) => (
-                    <AboutUs key={detail.caption} caption={detail.caption} content={detail.content} />
-                ))}
-            </div>
-        </div>
+                    <div className=" box-container flex items-center justify-center w-full sm:gap-5 sm:flex-row flex-col ">
+                        {details.map((detail) => (
+                            <AboutUs key={detail.caption} caption={detail.caption} content={detail.content} />
+                        ))}
+                    </div>
+                </div>
 
 
-        <div className="register text-white text-center flex justify-center flex-col items-center mt-8">
-            <h2 className="text-2xl font-bold">Fill the following form if you are interested to join one of our internships</h2>
-            <MyForm></MyForm>
-        </div>
-    </section>
-    <Footer></Footer>
-    </>
+                <div className="register text-white text-center flex justify-center flex-col items-center mt-8">
+                    <h2 className="text-2xl font-bold">Fill the following form if you are interested to join one of our internships</h2>
+                    <MyForm></MyForm>
+                </div>
+            </section>
+            <section>
+
+
+                <div className="text-white text-center flex justify-center flex-col items-center mt-8">
+                    <h2 className="text-2xl font-bold">Which is your best</h2>
+                    <div className=" box-container flex items-center justify-center w-full sm:gap-5 sm:flex-row flex-col mt-5">
+
+                        <h2 onClick={()=>changeIntern("Frontend")} className="text-center text-dark-pink mb-5 text-2xl font-bold">Frontend</h2>
+                        <h2 onClick={()=>changeIntern("Backend")} className="text-center text-dark-pink mb-5 text-2xl font-bold">Backend</h2>
+                        <h2 onClick={()=>changeIntern("Mobile")} className="text-center text-dark-pink mb-5 text-2xl font-bold">Mobile</h2>
+
+                    </div>
+                    <h2  className="text-center text-white mb-5 text-2xl font-bold">You have chosen: {intern}</h2>
+                </div>
+            </section>
+            <Footer></Footer>
+        </>
     )
 }
 
