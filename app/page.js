@@ -54,7 +54,7 @@ export default function Page() {
             ))}
         </div>
 
-        <div className="aboutUs text-white ml-5 mt-16 flex flex-col items-center justify-center">
+        <div className="aboutUs text-white  mt-16 flex flex-col items-center justify-center md:ml-5">
         <h1 className="text-5xl font-bold">About Us</h1>
 
             <div className=" box-container flex items-center justify-center w-full sm:gap-5 sm:flex-row flex-col ">
