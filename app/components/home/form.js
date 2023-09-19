@@ -1,5 +1,3 @@
-// components/MyForm.js
-
 
 const MyForm = (props) => {
   const field = props.choose || '';
