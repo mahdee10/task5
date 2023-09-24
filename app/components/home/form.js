@@ -7,13 +7,13 @@ const MyForm = () => {
     <form className="text-center m-5">
 
         <input
-          className="w-full p-2.5 my-1.5 mx-0"
+          className="w-full p-2.5 my-1.5 mx-0 text-black"
           type="text"
           name="name"
-          placeholder="Name"
+          placeholder="لطص هاف فرنص قيص"
         />
         <input
-          className="w-full p-2.5 my-1.5 mx-0"
+          className="w-full p-2.5 my-1.5 mx-0 text-black"
 
           type="email"
           name="email"
