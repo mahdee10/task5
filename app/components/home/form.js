@@ -10,7 +10,7 @@ const MyForm = () => {
           className="w-full p-2.5 my-1.5 mx-0 text-black"
           type="text"
           name="name"
-          placeholder="لطص هاف فرنص قيص"
+          placeholder="Name"
         />
         <input
           className="w-full p-2.5 my-1.5 mx-0 text-black"
